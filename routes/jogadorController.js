@@ -86,8 +86,8 @@ router.get('/jogadores/:id', (req, res, next) => {
 // atualizar
 // - PUT /jogadores/{id}
 router.put('/jogadores/:id', (req, res, next) => {
-    const { nivel, agenteFavorito, rank} = req.body
-if(!nivel || !agenteFavorito|| !rank ){
+    const { user, nivel, agenteFavorito, rank} = req.body
+if(!user || !nivel || !agenteFavorito|| !rank ){
     return res.status(400).json({error: "nivel, agente favorito e rank são obrigatorios"})
 }
 // validar se o mapa com aquele ID existe na lista
@@ -97,6 +97,7 @@ if(!jogador){
     return res.status(404).json({error: "Jogador não encontrado"})
 }
 // sobreescreve os dados dos Mapa pra atualizar
+jogador.user = user
 jogador.nivel = nivel
 jogador.agenteFavorito = agenteFavorito
 jogador.rank = rank
