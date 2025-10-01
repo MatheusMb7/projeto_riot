@@ -60,7 +60,7 @@ let armas = [
         id: 10,
         nome: "Classic",
         tipo: "Pistola",
-        preco: 0
+        preco: 500
     }
 ]
 
