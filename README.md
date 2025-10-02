@@ -21,11 +21,10 @@ Pré-requisitos:
 
 Passos:
 1. Clone o repositório:
-   git clone https://github.com/seu-usuario/nome-do-repo.git
+   git clone https://github.com/MatheusMb7/projeto_riot.git
    cd projeto-riot
 
 2. Instale as dependências:
-   npm install
    npm install express cors
    npm install --save-dev nodemon
 
